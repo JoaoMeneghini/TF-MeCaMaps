@@ -46,10 +46,10 @@ export default props => {
                 <Title>MeCaMaps</Title>
             </div>
             <MainMenu>
-                <Link to="tf-mecamaps">Menu Principal</Link>
+                <Link to="TF-MeCaMaps">Menu Principal</Link>
             </MainMenu>
             <Floor>
-                <Link to="firstfloor">Primeiro Andar</Link>
+                <Link to="/TF-MeCaMaps/firstfloor">Primeiro Andar</Link>
             </Floor>
 
             <div>

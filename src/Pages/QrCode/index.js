@@ -1,38 +1,3 @@
-/*import React, { useState, useEffect } from 'react';
-import { Div, Title, MainMenu, Floor, Map, Floor_img, Button} from './styles';
-import { Link } from 'react-router-dom';*/
-
-/*import QrReader from 'react-qr-reader';*/
-
-/*import { useHereC1 } from "../../Context/options";
-
-export default props => {
-    let [result, setResult] = useState('');
-    let delay = 500;
-
-    let { hereC1, setHereC1 } = useHereC1();
-
-    handleScan(() => {
-        if(result){
-            setResult(result);
-            setHereC1(result);
-            }
-    })
-
-    const previewStyle = {
-    height: 240,
-    width: 320,
-    }
-
-    return(
-    <div>
-
-        <p>{result}</p>
-    </div>
-    )
-}
-}*/
-
 import React, { useState, useEffect, Component } from 'react';
 import QrReader from 'react-qr-scanner';
 import ReactDOM from 'react-dom';
@@ -75,6 +40,8 @@ export default props => {
 
     }
 
+    const regex = /([^\/?]+)(?:\?.+)?$/;
+
     return(
         <React.Fragment>
             <div style = {camStyle} >
@@ -83,8 +50,8 @@ export default props => {
                     style={previewStyle}
                     onScan={(result) => {
                         if (result) {
-                            console.log(result);
-                            setData(result.text);
+                            console.log(result.text.match(regex)[1]);
+                            setData(result.text.match(regex)[1]);
                         }
                         else setData("Not Found");
                     }}
