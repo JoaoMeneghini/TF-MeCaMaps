@@ -18,6 +18,7 @@ export default props => {
                     <Route path="/zerofloor/qrcode" exact component={QR}/>
                     <Route path="/zerofloor/:actual?" exact component={Zero}/>
                     <Route path="/firstfloor" exact component={First}/>
+                    <Route path="/TF-MeCaMaps/:actual?" exact component={Main}/>
                     <Route path="/:actual?" exact component={Main}/>
                 </Switch>
             </div>
