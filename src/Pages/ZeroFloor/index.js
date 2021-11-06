@@ -46,20 +46,20 @@ export default props => {
                 <Title>MeCaMaps</Title>
             </div>
             <MainMenu>
-                <Link to="TF-MeCaMaps">Menu Principal</Link>
+                <Link to="/">Menu Principal</Link>
             </MainMenu>
             <Floor>
-                <Link to="/TF-MeCaMaps/firstfloor">Primeiro Andar</Link>
+                <Link to="/firstfloor">Primeiro Andar</Link>
             </Floor>
 
             <div>
-                <Drops type={0} actual={hereC1} setPlace={setHereC1}></Drops>
+                <Drops place={hereC1} setPlace={setHereC1}></Drops>
             </div>
             <div>
-                <Drops type={1} where={whereC1} setPlace={setWhereC1}></Drops>
+                <Drops place={whereC1} setPlace={setWhereC1}></Drops>
             </div>
             <div>
-                <Link to="zerofloor/qrcode"><CamButton>
+                <Link to="/zerofloor/qrcode"><CamButton>
                     <CamImg src={cam}/>
                 </CamButton></Link>
             </div>

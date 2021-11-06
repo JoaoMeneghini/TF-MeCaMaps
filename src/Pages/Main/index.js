@@ -30,16 +30,16 @@ export default props => {
                 <SubTitle>Se localize na Mecatrônica!</SubTitle>
             </div>
             <div>
-                <Link to="/TF-MeCaMaps/zerofloor"><Button>Visualizar Mapa</Button></Link>
+                <Link to="zerofloor"><Button>Visualizar Mapa</Button></Link>
             </div>
             <div>
-                <Link to="/TF-MeCaMaps/qrcode"><CamButton>
+                <Link to="qrcode"><CamButton>
                     <CamImg src={cam}/>
                 </CamButton></Link>
-                <Button><Drops type={0} actual={hereC1} setPlace={setHereC1}></Drops></Button>
+                <Button><Drops place={hereC1} setPlace={setHereC1}></Drops></Button>
             </div>
             <div>
-                <Button><Drops type={1} where={whereC1} setPlace={setWhereC1}></Drops></Button>
+                <Button><Drops place={whereC1} setPlace={setWhereC1}></Drops></Button>
             </div>
             <div>
                 <Button disabled={(hereC1.length < 1) || (whereC1.length < 1)}>
