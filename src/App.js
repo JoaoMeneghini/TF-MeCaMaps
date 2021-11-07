@@ -11,7 +11,7 @@ import QR from './Pages/QrCode';
 export default props => {
   return (
     <OptionProvider>
-        <Router basename={public.env.PUBLIC_URL}>
+        <Router>
             <div>
                 <Switch>
                     <Route path="/qrcode" component={QR}/>

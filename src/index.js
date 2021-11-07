@@ -4,14 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <HashRouter>
+    <React.StrictMode>
         <App />
-    </HashRouter>
-  </React.StrictMode>,
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
