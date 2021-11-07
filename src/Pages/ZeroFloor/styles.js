@@ -106,8 +106,8 @@ export const Floor = styled.div`
 export const Map = styled.div`
     width: 400px;
     height: 300px;
-    border: 5px transparent;
-    position: absolute;
+    border: 5px black;
+    position: relative;
     margin-top: 50px;
 `;
 
@@ -119,7 +119,7 @@ const c = 600*m2;
 export const Floor_img = styled.img`
     width: ${c}px;
     height: ${h}px;
-    position: absolute;
+    position: relative;
     z-index: 0;
     left: 248px;
     top: 180px;

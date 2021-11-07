@@ -65,7 +65,7 @@ export default props => {
             </div>
             <Map>
                 <Caminhos color={toColor} />
-                <ImageCropper src={Floor0} />
+                <Floor_img src={Floor0} />
             </Map>
         </Div>
     );

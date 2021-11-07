@@ -61,9 +61,9 @@ export default props => {
                     }}
                     onError={handleError}
                     legacyMode
+                    facingMode='user'
                 />
             </div>
-            <input type="button" value="Submit QR Code" onClick={openImageDialog} />
             <p style = {textStyle}>
                 {data}
             </p>
