@@ -1,16 +1,19 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import QrReader from 'react-qr-scanner';
-import ReactDOM from 'react-dom';
 import { useHistory } from "react-router-dom";
-import { Link } from 'react-router-dom';
 
 export default props => {
 
     const [data, setData] = useState('Not Found');
     const history = useHistory();
+    const qrReader = useRef(null);
 
     const handleError = (err) => {
         console.error(err)
+    }
+
+    const openImageDialog = () => {
+        qrReader.current.openImageDialog()
     }
 
     useEffect(()=>{
@@ -46,6 +49,7 @@ export default props => {
         <React.Fragment>
             <div style = {camStyle} >
                 <QrReader
+                    ref={qrReader}
                     delay={100}
                     style={previewStyle}
                     onScan={(result) => {
@@ -56,77 +60,13 @@ export default props => {
                         else setData("Not Found");
                     }}
                     onError={handleError}
+                    legacyMode
                 />
             </div>
+            <input type="button" value="Submit QR Code" onClick={openImageDialog} />
             <p style = {textStyle}>
                 {data}
             </p>
         </React.Fragment>
     )
 }
-/*
-
-
-class QrContainer extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            result: 'Hold QR Code Steady and Clear to Scan',
-        }
-        this.handleScan = this.handleScan.bind(this)
-    }
-
-    handleScan(data){
-        console.log(data);
-        if (data) {
-            this.setState({
-                result: data.text
-            })
-        }
-    }
-
-    handleError(err){
-        console.error(err)
-    }
-
-    render(){
-        const previewStyle = {
-            height: 700,
-            width: 1000,
-            display: 'flex',
-            justifyContent: 'center'
-        }
-
-        const camStyle = {
-            display: 'flex',
-            justifyContent: 'center',
-            marginTop: '-50px'
-        }
-
-        const textStyle = {
-            fontSize: '30px',
-            textAlign: 'center',
-            marginTop: '100px'
-
-        }
-
-        return(
-            <React.Fragment>
-                <div style = {camStyle} >
-                    <QrReader
-                        delay={100}
-                        style={previewStyle}
-                        onError={this.handleError}
-                        onScan={this.handleScan}
-                    />
-                </div>
-                <p style = {textStyle}>
-                    {this.state.result}
-                </p>
-            </React.Fragment>
-        )
-    }
-}
-
-export default QrContainer;*/
-
