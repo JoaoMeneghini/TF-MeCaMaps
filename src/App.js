@@ -14,11 +14,11 @@ export default props => {
         <Router>
             <div>
                 <Switch>
-                    <Route path="/qrcode" exact component={QR}/>
-                    <Route path="/zerofloor/qrcode" exact component={QR}/>
-                    <Route path="/zerofloor/:actual?" exact component={Zero}/>
-                    <Route path="/firstfloor" exact component={First}/>
-                    <Route path="/:actual?" exact component={QR}/>
+                    <Route path="/qrcode" component={QR}/>
+                    <Route path="/zerofloor/qrcode" component={QR}/>
+                    <Route path="/zerofloor/:actual?" component={Zero}/>
+                    <Route path="/firstfloor" component={First}/>
+                    <Route path="/:actual?" component={Main}/>
                 </Switch>
             </div>
         </Router>
