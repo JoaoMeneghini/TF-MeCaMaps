@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/TF-MeCaMaps/static/css/main.9af69577.chunk.css",
-    "main.js": "/TF-MeCaMaps/static/js/main.4ad7f143.chunk.js",
-    "main.js.map": "/TF-MeCaMaps/static/js/main.4ad7f143.chunk.js.map",
+    "main.js": "/TF-MeCaMaps/static/js/main.9034fae0.chunk.js",
+    "main.js.map": "/TF-MeCaMaps/static/js/main.9034fae0.chunk.js.map",
     "runtime-main.js": "/TF-MeCaMaps/static/js/runtime-main.89f9341f.js",
     "runtime-main.js.map": "/TF-MeCaMaps/static/js/runtime-main.89f9341f.js.map",
-    "static/js/2.00bedee6.chunk.js": "/TF-MeCaMaps/static/js/2.00bedee6.chunk.js",
-    "static/js/2.00bedee6.chunk.js.map": "/TF-MeCaMaps/static/js/2.00bedee6.chunk.js.map",
+    "static/js/2.5318b9ca.chunk.js": "/TF-MeCaMaps/static/js/2.5318b9ca.chunk.js",
+    "static/js/2.5318b9ca.chunk.js.map": "/TF-MeCaMaps/static/js/2.5318b9ca.chunk.js.map",
     "static/js/3.3e57ede0.chunk.js": "/TF-MeCaMaps/static/js/3.3e57ede0.chunk.js",
     "static/js/3.3e57ede0.chunk.js.map": "/TF-MeCaMaps/static/js/3.3e57ede0.chunk.js.map",
     "index.html": "/TF-MeCaMaps/index.html",
     "service-worker.js": "/TF-MeCaMaps/service-worker.js",
     "service-worker.js.map": "/TF-MeCaMaps/service-worker.js.map",
     "static/css/main.9af69577.chunk.css.map": "/TF-MeCaMaps/static/css/main.9af69577.chunk.css.map",
-    "static/js/2.00bedee6.chunk.js.LICENSE.txt": "/TF-MeCaMaps/static/js/2.00bedee6.chunk.js.LICENSE.txt",
+    "static/js/2.5318b9ca.chunk.js.LICENSE.txt": "/TF-MeCaMaps/static/js/2.5318b9ca.chunk.js.LICENSE.txt",
     "static/media/Planta_Terreo.a37ef865.jpg": "/TF-MeCaMaps/static/media/Planta_Terreo.a37ef865.jpg",
     "static/media/Superior.34bbf898.png": "/TF-MeCaMaps/static/media/Superior.34bbf898.png",
     "static/media/cam.55f5bc8f.png": "/TF-MeCaMaps/static/media/cam.55f5bc8f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.89f9341f.js",
-    "static/js/2.00bedee6.chunk.js",
+    "static/js/2.5318b9ca.chunk.js",
     "static/css/main.9af69577.chunk.css",
-    "static/js/main.4ad7f143.chunk.js"
+    "static/js/main.9034fae0.chunk.js"
   ]
 }
