@@ -6,14 +6,9 @@ export default props => {
 
     const [data, setData] = useState('Not Found');
     const history = useHistory();
-    const qrReader = useRef(null);
 
     const handleError = (err) => {
         console.error(err)
-    }
-
-    const openImageDialog = () => {
-        qrReader.current.openImageDialog()
     }
 
     useEffect(()=>{
@@ -51,7 +46,6 @@ export default props => {
         <React.Fragment>
             <div style = {camStyle} >
                 <QrReader
-                    ref={qrReader}
                     delay={100}
                     style={previewStyle}
                     onScan={(result) => {
@@ -62,7 +56,6 @@ export default props => {
                         else setData("Not Found");
                     }}
                     onError={handleError}
-                    legacyMode
                     facingMode='environment'
                 />
             </div>
