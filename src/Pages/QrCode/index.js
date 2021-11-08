@@ -19,8 +19,8 @@ export default props => {
     }, [data])
 
     const previewStyle = {
-        height: 700,
-        width: 1000,
+        height: '100%',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center'
     }
@@ -40,8 +40,6 @@ export default props => {
 
     const regex = /([^\/?]+)(?:\?.+)?$/;
 
-    console.log('20:08');
-
     return(
         <React.Fragment>
             <div style = {camStyle} >
@@ -59,9 +57,6 @@ export default props => {
                     facingMode='environment'
                 />
             </div>
-            <p style = {textStyle}>
-                {data}
-            </p>
         </React.Fragment>
     )
 }
