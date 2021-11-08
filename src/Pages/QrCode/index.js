@@ -45,6 +45,8 @@ export default props => {
 
     const regex = /([^\/?]+)(?:\?.+)?$/;
 
+    console.log('20:08');
+
     return(
         <React.Fragment>
             <div style = {camStyle} >
@@ -61,7 +63,7 @@ export default props => {
                     }}
                     onError={handleError}
                     legacyMode
-                    facingMode='user'
+                    facingMode='environment'
                 />
             </div>
             <p style = {textStyle}>
