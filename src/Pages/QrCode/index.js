@@ -5,11 +5,20 @@ import { useHistory } from "react-router-dom";
 export default props => {
 
     const [data, setData] = useState('Not Found');
+    const [mode, setMode] = useState('user');
     const history = useHistory();
 
     const handleError = (err) => {
         console.error(err)
     }
+
+    const cameraButton = () =>{
+        if(mode === "environment"){
+            setMode('user')
+        } else {
+            setMode('environment')
+        }
+      }
 
     useEffect(()=>{
         if(data==='Not Found') {
@@ -19,8 +28,8 @@ export default props => {
     }, [data])
 
     const previewStyle = {
-        height: '100%',
-        width: '100%',
+        height: 1000,
+        width: 1000,
         display: 'flex',
         justifyContent: 'center'
     }
@@ -54,9 +63,10 @@ export default props => {
                         else setData("Not Found");
                     }}
                     onError={handleError}
-                    facingMode='environment'
+                    facingMode={mode}
                 />
             </div>
+            <input type="button" value="Camera..." onClick={cameraButton} />
         </React.Fragment>
     )
 }

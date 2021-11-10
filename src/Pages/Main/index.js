@@ -42,9 +42,9 @@ export default props => {
                 <Button><Drops place={whereC1} setPlace={setWhereC1}></Drops></Button>
             </div>
             <div>
-                <Button disabled={(hereC1.length < 1) || (whereC1.length < 1)}>
-                    <Link to="zerofloor"><Button>Gerar Rota</Button></Link>
-                </Button>
+                <Link to={((hereC1.length > 1) && (whereC1.length > 1)) ? 'zerofloor' : false}>
+                    <Button disabled={(hereC1.length < 1) || (whereC1.length < 1)}>Gerar Rota</Button>
+                </Link>
             </div>
         </Div>
     );

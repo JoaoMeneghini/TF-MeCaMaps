@@ -22,6 +22,8 @@ export default class Grafo {
       let a = v1;
       let Q  = Object.assign({}, this.dist[v1]);
       let s = [];
+      let alt = 0;
+      let scale = 200;
 
       while (!s.includes(v2)) {
 
@@ -39,7 +41,7 @@ export default class Grafo {
 
           for (let viz in maps[a]) {
           //Determina distâncias
-                let alt = this.dist[v1][a] + maps[a][viz][0];
+                alt = this.dist[v1][a] + maps[a][viz][0];
                 let distancia = this.dist[v1][viz];
                 if (alt < distancia) {
                     this.dist[v1][viz] = alt;
@@ -59,7 +61,7 @@ export default class Grafo {
 
       path.reverse();
 
-      return [this.dist,path] ;
+      return [alt,path] ;
   }
 }
 

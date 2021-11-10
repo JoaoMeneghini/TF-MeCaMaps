@@ -12,6 +12,7 @@ const Caminhos = (props) => {
       width="800"
       heigth="600"
       viewBox="0 0 800 600"
+      border= "solid 1px black"
     >
       <path
         id='AV1'

@@ -8,7 +8,11 @@ import Drops from '../../Components/Dropdown/Dropdown';
 
 //import Floor0 from '../../Images/Inferior.png';
 import Floor0 from '../../Components/Paths/Planta_Terreo.jpg';
-import Caminhos from '../../Components/Paths/caminhos';
+import Floor1 from '../../Images/Superior.png'
+
+import Routes_zero from '../../Components/Paths/caminhos_zero';
+import Routes_first from '../../Components/Paths/caminhos_first';
+
 import cam from '../../Images/cam.png';
 
 import { useHereC1, useWhereC1, useColor } from "../../Context/options";
@@ -20,6 +24,9 @@ export default props => {
     const { hereC1, setHereC1 } = useHereC1();
     const { whereC1, setWhereC1 } = useWhereC1();
     const { actual } = useParams();
+
+    const [ floor, setFloor ] = useState(0);
+    const [ distance, setDistance ] = useState(0);
 
     useEffect(() => {
         if (actual) {
@@ -33,12 +40,20 @@ export default props => {
             let end = correlations[whereC1];
             let values = b.AchaMenorCaminho(init,end);
             setToColor(values[1]);
+            console.log(values[0]);
             let d1 = values[0];
+            setDistance(d1);
         };
 
     },[hereC1,whereC1])
 
-    console.log(hereC1);
+    const changeFloor = () => {
+        if (floor === 0) {
+            setFloor(1);
+        } else {
+            setFloor(0);
+        }
+    };
 
     return (
         <Div>
@@ -48,10 +63,7 @@ export default props => {
             <MainMenu>
                 <Link to="/">Menu Principal</Link>
             </MainMenu>
-            <Floor>
-                <Link to="/firstfloor">Primeiro Andar</Link>
-            </Floor>
-
+            <Floor onClick={changeFloor}>Trocar andar</Floor>
             <div>
                 <Drops place={hereC1} setPlace={setHereC1}></Drops>
             </div>
@@ -63,10 +75,19 @@ export default props => {
                     <CamImg src={cam}/>
                 </CamButton></Link>
             </div>
-            <Map>
-                <Caminhos color={toColor} />
-                <Floor_img src={Floor0} />
-            </Map>
+            {floor === 0 ?
+            (
+                <Map>
+                    <Routes_zero color={toColor}/>
+                    <Floor_img src={Floor0} />
+                </Map>
+            ):(
+                <Map>
+                    <Routes_first color={toColor}/>
+                    <Floor_img src={Floor1} />
+                </Map>
+            )}
+            <p>Distância até o destino: {distance}</p>
         </Div>
     );
 }
