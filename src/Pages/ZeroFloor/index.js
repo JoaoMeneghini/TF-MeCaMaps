@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useGesture } from "react-use-gesture";
-import { Div, Title, MainMenu, Floor, Map, Floor_img, Button, CamImg, CamButton} from './styles';
+import { Div, Title, MainMenu, Floor, Map, Floor_img, Button, CamImg, CamButton, Dropdown} from './styles';
 import { Link, useParams } from 'react-router-dom';
 
 import  Grafo from '../../Components/Djikstra/grafo';
@@ -64,12 +64,14 @@ export default props => {
                 <Link to="/">Menu Principal</Link>
             </MainMenu>
             <Floor onClick={changeFloor}>Trocar andar</Floor>
-            <div>
-                <Drops place={hereC1} setPlace={setHereC1}></Drops>
-            </div>
-            <div>
-                <Drops place={whereC1} setPlace={setWhereC1}></Drops>
-            </div>
+            <Dropdown>
+                <div>
+                    <Drops place={hereC1} setPlace={setHereC1}></Drops>
+                </div>
+                <div>
+                    <Drops place={whereC1} setPlace={setWhereC1}></Drops>
+                </div>
+            </Dropdown>
             <div>
                 <Link to="/zerofloor/qrcode"><CamButton>
                     <CamImg src={cam}/>

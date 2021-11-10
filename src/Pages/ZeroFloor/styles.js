@@ -12,10 +12,11 @@ export const Container = styled.div`
 `;
 
 export const Div = styled.div`
-    width: 450px;
-    height: 450px;
+    width: '100%';
+    height: '100%';
     margin: 20px auto;
     position: relative;
+    border: 5px solid black;
 `;
 
 const theme = {
@@ -36,8 +37,8 @@ export const Button = styled.button`
     justify-content: center;
     background-color: ${(props) => theme[props.theme].default};
     color: white;
-    height: 50px;
-    width: 300px;
+    height: 40px;
+    width: 100px;
     padding: 5px 15px;
     border-radius: 5px;
     outline: 0;
@@ -58,12 +59,18 @@ Button.defaultProps = {
     theme: "gray"
   };
 
+export const Dropdown = styled.div`
+    position: relative;
+    top: 25px;
+`;
+
 export const CamButton = styled.button`
     position: absolute;
     border-radius: 5px;
     height: 50px;
     width: 50px;
     left: 12px;
+    top: 200px;
     color: white;
     background-color: ${(props) => theme[props.theme].default};
     cursor: pointer;
@@ -81,12 +88,6 @@ export const Title = styled.h1`
     display: flex;
     justify-content: center;
 `
-
-export const SubTitle = styled.h2`
-    display: flex;
-    justify-content: center;
-    color: #aaaaaa;
-`
 export const CamImg = styled.img`
     position: relative;
     height: 70%;
@@ -94,21 +95,21 @@ export const CamImg = styled.img`
     margin: 8px 0;
 `
 export const MainMenu = styled.div`
-    position: relative;
+    position: absolute;
     left: 0px;
 `;
 
 export const Floor = styled.div`
-    position: relative;
+    position: absolute;
     right: 0px;
 `;
 
 export const Map = styled.div`
-    width: 400px;
-    height: 300px;
-    border: 5px black;
+    width: 800px;
+    height: 600px;
     position: relative;
     margin-top: 50px;
+    left: 18%;
 `;
 
 const m1 = 0.304;
@@ -117,12 +118,10 @@ const h = 800*m1;
 const c = 600*m2;
 
 export const Floor_img = styled.img`
-    width: ${c}px;
-    height: ${h}px;
-    position: relative;
+    width: 800px;
+    height: 600px;
+    position: absolute;
     z-index: 0;
-    left: 248px;
-    top: 180px;
 `;
 
 /*export const Floor_img = styled.img`
@@ -130,4 +129,6 @@ export const Floor_img = styled.img`
     height: ${h}px;
     position: absolute;
     z-index: 0;
+    left: 248px;
+    top: 180px;
 `;*/

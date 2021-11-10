@@ -5,13 +5,17 @@ const Caminhos = (props) => {
   let black =  '#000000';
   let green = '#00FF7F';
 
+  const m = 0.57;
+  const h=600*m;
+  const w=800*m;
+
   return (
     <div>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width="800"
         height="600"
-        viewBox="0 0 800 600"
+        viewBox={"140 " + "105 " + w.toString() + " " + h.toString()}
         >
         <path
             fill="none"
