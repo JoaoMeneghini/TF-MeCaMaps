@@ -43,7 +43,9 @@ export default props => {
             console.log(values[0]);
             let d1 = values[0];
             setDistance(d1);
-        };
+        } else {
+            setToColor([]);
+        }
 
     },[hereC1,whereC1])
 
