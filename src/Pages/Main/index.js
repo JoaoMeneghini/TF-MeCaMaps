@@ -27,7 +27,7 @@ export default props => {
                 <Title>MeCaMaps</Title>
             </div>
             <div>
-                <SubTitle>Se localize na Mecatrônica!</SubTitle>
+                <SubTitle>Localize-se na Mecatrônica!</SubTitle>
             </div>
             <div>
                 <Link to="zerofloor"><Button>Visualizar Mapa</Button></Link>
