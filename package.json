@@ -1,6 +1,6 @@
 {
     "name": "TF-MeCaMaps",
-    "homepage": "http://joaomeneghini.github.io/TF-MeCaMaps",
+    "homepage": ".",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
