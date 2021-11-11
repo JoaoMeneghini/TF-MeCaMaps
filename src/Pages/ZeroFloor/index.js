@@ -36,8 +36,8 @@ export default props => {
 
     useEffect(() => {
         if (hereC1 !== '' && whereC1 !== '') {
-            let init = correlations[hereC1];
-            let end = correlations[whereC1];
+            let init = correlations[hereC1][0];
+            let end = correlations[whereC1][0];
             let values = b.AchaMenorCaminho(init,end);
             setToColor(values[1]);
             console.log(values[0]);

@@ -1,14 +1,10 @@
 import Multiselect from 'multiselect-react-dropdown';
+import { places } from './places';
 
 export default function Drops(props) {
 
     const state = {
-        options: [
-            {key: 'Arturo', cat:'Professores'},
-            {key: 'Larissa', cat:'Professores'},
-            {key: 'MT02', cat:'Salas'},
-            {key: 'MT25', cat:'Salas'}
-        ]
+        options: places
     };
 
     return (
