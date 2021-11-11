@@ -15,7 +15,7 @@ import Routes_first from '../../Components/Paths/caminhos_first';
 
 import cam from '../../Images/cam.png';
 
-import { useHereC1, useWhereC1, useColor } from "../../Context/options";
+import { useHereC1, useWhereC1, useColor, useFloor } from "../../Context/options";
 import  { correlations } from '../../Components/Paths/correlations';
 
 export default props => {
@@ -23,16 +23,17 @@ export default props => {
     const { toColor, setToColor } = useColor();
     const { hereC1, setHereC1 } = useHereC1();
     const { whereC1, setWhereC1 } = useWhereC1();
+    const { floor, setFloor }= useFloor();
     const { actual } = useParams();
 
-    const [ floor, setFloor ] = useState(0);
     const [ distance, setDistance ] = useState(0);
 
     useEffect(() => {
         if (actual) {
             setHereC1(actual);
+            setFloor(correlations[actual][1]);
         }
-    },[])
+    },[actual])
 
     useEffect(() => {
         if (hereC1 !== '' && whereC1 !== '') {
@@ -45,6 +46,9 @@ export default props => {
             setDistance(d1);
         } else {
             setToColor([]);
+        };
+        if (hereC1 !== '') {
+            setFloor(correlations[hereC1][1]);
         }
 
     },[hereC1,whereC1])

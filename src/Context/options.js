@@ -5,6 +5,7 @@ const OptionContext = createContext();
 export default function OptionProvider({ children }) {
   const [hereC1, setHereC1] = useState('');
   const [whereC1, setWhereC1] = useState('');
+  const [floor, setFloor] = useState(0);
   const [toColor, setToColor] = useState([]);
 
   return (
@@ -15,7 +16,9 @@ export default function OptionProvider({ children }) {
         whereC1,
         setWhereC1,
         toColor,
-        setToColor
+        setToColor,
+        floor,
+        setFloor
       }}
     >
       {children}
@@ -36,8 +39,14 @@ export function useWhereC1() {
     return { whereC1, setWhereC1 };
   }
 
-  export function useColor() {
+export function useColor() {
     const context = useContext(OptionContext);
     const { toColor, setToColor } = context;
     return { toColor, setToColor };
 }
+
+export function useFloor() {
+    const context = useContext(OptionContext);
+    const { floor, setFloor } = context;
+    return { floor, setFloor };
+  }
