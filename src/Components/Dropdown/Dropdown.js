@@ -11,7 +11,7 @@ export default function Drops(props) {
     <>
         <Multiselect
         options={state.options}
-        placeholder={props.place ? '' : 'Selecione...'}
+        placeholder={props.place ? '' : (props.placeholder === 'atual' ? 'Selecione onde está' : 'Selecione seu destino')}
         groupBy="cat"
         displayValue="key"
         selectionLimit={1}

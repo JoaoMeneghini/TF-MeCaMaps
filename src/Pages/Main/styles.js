@@ -1,13 +1,9 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  display: flex;
   text-align: center;
-  margin-top: 0;
   background-color: gray;
 `;
 
@@ -17,17 +13,6 @@ export const Div = styled.div`
     margin: 20px auto;
     position: relative;
 `;
-
-const theme = {
-    gray: {
-      default: "#bbbbbb",
-      hover: "#aaaaaa"
-    },
-    pink: {
-      default: "#e91e63",
-      hover: "#ad1457"
-    }
-  };
 
 export const Button = styled.button`
     display: flex;
@@ -53,6 +38,17 @@ export const Button = styled.button`
         opacity: 0.7;
     }
 `;
+
+const theme = {
+    gray: {
+      default: "#bbbbbb",
+      hover: "#aaaaaa"
+    },
+    pink: {
+      default: "#e91e63",
+      hover: "#ad1457"
+    }
+  };
 
 Button.defaultProps = {
     theme: "gray"
@@ -93,3 +89,10 @@ export const CamImg = styled.img`
     width: 100%;
     margin: 8px 0;
 `
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;

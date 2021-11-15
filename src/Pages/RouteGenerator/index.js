@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useGesture } from "react-use-gesture";
-import { Div, Title, MainMenu, Floor, Map, Floor_img, Button, CamImg, CamButton, Dropdown} from './styles';
+import { Div, Title, MainMenu, Floor, Floor_options, Floor_option, StyledLink, Map, Floor_img, Buttons, Buttons_a, Buttons_cam, CamImg, CamButton, Dropdown} from './styles';
 import { Link, useParams } from 'react-router-dom';
 
 import  Grafo from '../../Components/Djikstra/grafo';
@@ -66,23 +66,26 @@ export default props => {
             <div>
                 <Title>MeCaMaps</Title>
             </div>
-            <MainMenu>
-                <Link to="/">Menu Principal</Link>
-            </MainMenu>
-            <Floor onClick={changeFloor}>Trocar andar</Floor>
-            <Dropdown>
-                <div>
-                    <Drops place={hereC1} setPlace={setHereC1}></Drops>
-                </div>
-                <div>
-                    <Drops place={whereC1} setPlace={setWhereC1}></Drops>
-                </div>
-            </Dropdown>
-            <div>
-                <Link to="/zerofloor/qrcode"><CamButton>
-                    <CamImg src={cam}/>
-                </CamButton></Link>
-            </div>
+            <Floor_options>
+                <Floor_option>
+                    <StyledLink to="/" style={{ textDecoration: 'none' }}>Menu Principal</StyledLink>
+                </Floor_option>
+                <Floor_option onClick={changeFloor}>Trocar andar</Floor_option>
+            </Floor_options>
+            <Buttons>
+                <Buttons_cam>
+                    <StyledLink to="/route-generator/qrcode"><CamButton>
+                        <CamImg src={cam}/>
+                    </CamButton></StyledLink>
+                </Buttons_cam>
+                <Buttons_a>
+                    <Drops placeholder='atual' place={hereC1} setPlace={setHereC1}></Drops>
+                </Buttons_a>
+                <Buttons_a>
+                    <Drops placeholder='destino' place={whereC1} setPlace={setWhereC1}></Drops>
+                </Buttons_a>
+
+            </Buttons>
             {floor === 0 ?
             (
                 <Map>
@@ -134,11 +137,6 @@ function ImageCropper({ src }) {
               className="relative w-auto h-full max-w-none max-h-none"
             />
           </div>
-        </div>
-        <div className="mt-2">
-          <p>Crop X: {crop.x}</p>
-          <p>Crop Y: {crop.y}</p>
-          <p>Crop Scale: {crop.scale}</p>
         </div>
       </>
     );

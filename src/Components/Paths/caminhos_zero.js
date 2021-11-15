@@ -2,20 +2,22 @@ import React from 'react';
 import { Svg } from './styles';
 
 const Caminhos = (props) => {
-  let black =  '#000000';
-  let green = '#00FF7F';
 
-  const m = 0.57;
-  const h=600*m;
-  const w=800*m;
+  const m = 0.65;
+  const h=600;
+  const w=800;
+  const x=w*(1-m)/2;
+  const y=h*(1-m)/2;
+  const w1=w*m;
+  const h1=h*m;
+
+  /*x.toString() + " " + y.toString() + " " + w1.toString() + " " + h1.toString()*/
 
   return (
     <div>
       <Svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="800"
-        height="600"
-        viewBox={"140 " + "105 " + w.toString() + " " + h.toString()}
+        preserveAspectRatio="xMidYMid meet"
+        viewBox={x.toString() + " " + y.toString() + " " + w1.toString() + " " + h1.toString()}
         >
         <path
             fill="none"

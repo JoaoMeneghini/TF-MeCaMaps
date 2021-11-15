@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   position: fixed;
@@ -12,11 +13,35 @@ export const Container = styled.div`
 `;
 
 export const Div = styled.div`
-    width: '100%';
-    height: '100%';
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     margin: 20px auto;
-    position: relative;
-    border: 5px solid black;
+`;
+
+export const Floor_options = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 95%;
+    height: 50px;
+    margin-left: 10px;
+`;
+
+export const Floor_option= styled.div`
+    width: 130px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 0px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: #aaaaaa;
+    padding: 5px;
+    color: black;
 `;
 
 const theme = {
@@ -29,6 +54,14 @@ const theme = {
       hover: "#ad1457"
     }
   };
+
+export const StyledLink = styled(Link)`
+    text-decoration: inherit;
+    color: inherit;
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: inherit;
+    }
+`;
 
 export const Button = styled.button`
     display: flex;
@@ -59,22 +92,30 @@ Button.defaultProps = {
     theme: "gray"
   };
 
-export const Dropdown = styled.div`
-    position: relative;
-    top: 25px;
+export const Buttons = styled.div`
+    display: flex;
+    width: 100%;
+    height: 65px;
+`;
+
+export const Buttons_a = styled.div`
+    width: 45%;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
+`;
+
+export const Buttons_cam = styled.div`
+    width: 10%;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
 `;
 
 export const CamButton = styled.button`
-    position: absolute;
     border-radius: 5px;
-    height: 50px;
-    width: 50px;
-    left: 12px;
-    top: 200px;
-    color: white;
+    height: 33px;
+    width: 33px;
     background-color: ${(props) => theme[props.theme].default};
     cursor: pointer;
-    box-shadow: 0px 2px 2px lightgray;
     transition: ease background-color 250ms;
     &:hover {
         background-color: ${(props) => theme[props.theme].hover};
@@ -89,46 +130,28 @@ export const Title = styled.h1`
     justify-content: center;
 `
 export const CamImg = styled.img`
-    position: relative;
-    height: 70%;
+    height: 60%;
     width: 100%;
-    margin: 8px 0;
+    margin-top: 5px;
+
 `
-export const MainMenu = styled.div`
+export const MainMenu = styled.button`
     position: absolute;
     left: 0px;
 `;
 
-export const Floor = styled.div`
+export const Floor = styled.button`
     position: absolute;
     right: 0px;
 `;
 
 export const Map = styled.div`
-    width: 800px;
-    height: 600px;
-    position: relative;
-    margin-top: 50px;
-    left: 18%;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 10px 10px 10px;
 `;
-
-const m1 = 0.304;
-const m2 = 0.515;
-const h = 800*m1;
-const c = 600*m2;
 
 export const Floor_img = styled.img`
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    z-index: 0;
+    width: 100%
 `;
-
-/*export const Floor_img = styled.img`
-    width: ${c}px;
-    height: ${h}px;
-    position: absolute;
-    z-index: 0;
-    left: 248px;
-    top: 180px;
-`;*/

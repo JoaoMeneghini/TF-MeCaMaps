@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Switch} from 'react-router-dom';
 import OptionProvider from "./Context/options";
 
 import Main from './Pages/Main';
-import Zero from './Pages/ZeroFloor';
+import Route_generator from './Pages/RouteGenerator';
 import QR from './Pages/QrCode';
 
 export default props => {
@@ -14,8 +14,8 @@ export default props => {
             <div>
                 <Switch>
                     <Route path="/qrcode" component={QR}/>
-                    <Route path="/zerofloor/qrcode" component={QR}/>
-                    <Route path="/zerofloor/:actual?" component={Zero}/>
+                    <Route path="/route-generator/qrcode" component={QR}/>
+                    <Route path="/route-generator/:actual?" component={Route_generator}/>
                     <Route path="/:actual?" component={Main}/>
                 </Switch>
             </div>

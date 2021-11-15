@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CamImg, Div, CamButton, SubTitle, Title, Button } from './styles';
+import { CamImg, Div, CamButton, StyledLink, SubTitle, Title, Button } from './styles';
 import cam from '../../Images/cam.png';
 import { Link, useParams } from 'react-router-dom';
 
@@ -30,21 +30,21 @@ export default props => {
                 <SubTitle>Localize-se na Mecatrônica!</SubTitle>
             </div>
             <div>
-                <Link to="zerofloor"><Button>Visualizar Mapa</Button></Link>
+                <StyledLink to="route-generator" style={{ textDecoration: 'none' }}><Button>Visualizar Mapa</Button></StyledLink>
             </div>
             <div>
-                <Link to="qrcode"><CamButton>
+                <StyledLink to="qrcode"><CamButton>
                     <CamImg src={cam}/>
-                </CamButton></Link>
-                <Button><Drops place={hereC1} setPlace={setHereC1}></Drops></Button>
+                </CamButton></StyledLink>
+                <Button><Drops placeholder='atual' place={hereC1} setPlace={setHereC1}></Drops></Button>
             </div>
             <div>
-                <Button><Drops place={whereC1} setPlace={setWhereC1}></Drops></Button>
+                <Button><Drops placeholder='destino' place={whereC1} setPlace={setWhereC1}></Drops></Button>
             </div>
             <div>
-                <Link to={((hereC1.length > 1) && (whereC1.length > 1)) ? 'zerofloor' : false}>
+                <StyledLink to={((hereC1.length > 1) && (whereC1.length > 1)) ? 'route-generator' : false} style={{ textDecoration: 'none' }}>
                     <Button disabled={(hereC1.length < 1) || (whereC1.length < 1)}>Gerar Rota</Button>
-                </Link>
+                </StyledLink>
             </div>
         </Div>
     );
