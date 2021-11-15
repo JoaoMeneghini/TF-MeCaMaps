@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.9af69577.chunk.css",
-    "main.js": "./static/js/main.e3a57fdf.chunk.js",
-    "main.js.map": "./static/js/main.e3a57fdf.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.0dd8401f.js",
-    "runtime-main.js.map": "./static/js/runtime-main.0dd8401f.js.map",
-    "static/js/2.5ab4556d.chunk.js": "./static/js/2.5ab4556d.chunk.js",
-    "static/js/2.5ab4556d.chunk.js.map": "./static/js/2.5ab4556d.chunk.js.map",
-    "static/js/3.3e57ede0.chunk.js": "./static/js/3.3e57ede0.chunk.js",
-    "static/js/3.3e57ede0.chunk.js.map": "./static/js/3.3e57ede0.chunk.js.map",
+    "main.css": "./static/css/main.dcbd261d.chunk.css",
+    "main.js": "./static/js/main.bd9604f8.chunk.js",
+    "main.js.map": "./static/js/main.bd9604f8.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.4a98abc8.js",
+    "runtime-main.js.map": "./static/js/runtime-main.4a98abc8.js.map",
+    "static/js/2.faaba1e8.chunk.js": "./static/js/2.faaba1e8.chunk.js",
+    "static/js/2.faaba1e8.chunk.js.map": "./static/js/2.faaba1e8.chunk.js.map",
+    "static/js/3.c43702bc.chunk.js": "./static/js/3.c43702bc.chunk.js",
+    "static/js/3.c43702bc.chunk.js.map": "./static/js/3.c43702bc.chunk.js.map",
     "index.html": "./index.html",
     "service-worker.js": "./service-worker.js",
     "service-worker.js.map": "./service-worker.js.map",
-    "static/css/main.9af69577.chunk.css.map": "./static/css/main.9af69577.chunk.css.map",
-    "static/js/2.5ab4556d.chunk.js.LICENSE.txt": "./static/js/2.5ab4556d.chunk.js.LICENSE.txt",
-    "static/media/Planta_Terreo.a37ef865.jpg": "./static/media/Planta_Terreo.a37ef865.jpg",
+    "static/css/main.dcbd261d.chunk.css.map": "./static/css/main.dcbd261d.chunk.css.map",
+    "static/js/2.faaba1e8.chunk.js.LICENSE.txt": "./static/js/2.faaba1e8.chunk.js.LICENSE.txt",
     "static/media/Superior.34bbf898.png": "./static/media/Superior.34bbf898.png",
-    "static/media/cam.55f5bc8f.png": "./static/media/cam.55f5bc8f.png"
+    "static/media/cam.55f5bc8f.png": "./static/media/cam.55f5bc8f.png",
+    "static/media/first.393a3f12.jpeg": "./static/media/first.393a3f12.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0dd8401f.js",
-    "static/js/2.5ab4556d.chunk.js",
-    "static/css/main.9af69577.chunk.css",
-    "static/js/main.e3a57fdf.chunk.js"
+    "static/js/runtime-main.4a98abc8.js",
+    "static/js/2.faaba1e8.chunk.js",
+    "static/css/main.dcbd261d.chunk.css",
+    "static/js/main.bd9604f8.chunk.js"
   ]
 }
