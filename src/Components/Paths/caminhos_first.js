@@ -3,17 +3,21 @@ import { Svg } from './styles';
 
 const Caminhos = (props) => {
 
-  const m = 0.57;
-  const h=600*m;
-  const w=800*m;
+    const mw = 1;
+    const mh = 0.25;
+    const w=800;
+    const h=600;
+
+    const x=w*(1-mw)/2;
+    const y=h*(1-mh)/2;
+    const w1=w*mw;
+    const h1=h*mh;
 
   return (
     <div>
       <Svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="800"
-        height="600"
-        viewBox={"140 " + "105 " + w.toString() + " " + h.toString()}
+        preserveAspectRatio="xMidYMid meet"
+        viewBox={x.toString() + " " + y.toString() + " " + w1.toString() + " " + h1.toString()}
       >
         <path
           fill="none"

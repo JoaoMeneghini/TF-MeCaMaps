@@ -85,9 +85,9 @@ export const SubTitle = styled.h2`
 `
 export const CamImg = styled.img`
     position: relative;
-    height: 70%;
+    height: 55%;
     width: 100%;
-    margin: 8px 0;
+    margin: 10px 0;
 `
 
 export const StyledLink = styled(Link)`

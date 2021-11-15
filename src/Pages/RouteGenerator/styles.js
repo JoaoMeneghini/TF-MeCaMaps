@@ -111,11 +111,14 @@ export const Buttons_cam = styled.div`
 `;
 
 export const CamButton = styled.button`
+    display: flex;
     border-radius: 5px;
     height: 33px;
     width: 33px;
     background-color: ${(props) => theme[props.theme].default};
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
     transition: ease background-color 250ms;
     &:hover {
         background-color: ${(props) => theme[props.theme].hover};
@@ -130,14 +133,18 @@ export const Title = styled.h1`
     justify-content: center;
 `
 export const CamImg = styled.img`
-    height: 60%;
-    width: 100%;
-    margin-top: 5px;
+    height: 23px;
+    width: 23px;
 
 `
 export const MainMenu = styled.button`
     position: absolute;
     left: 0px;
+`;
+
+export const Distance = styled.p`
+    width: 100%;
+    text-align: center;
 `;
 
 export const Floor = styled.button`
