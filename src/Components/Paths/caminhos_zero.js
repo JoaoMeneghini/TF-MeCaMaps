@@ -4,7 +4,7 @@ import { Svg } from './styles';
 const Caminhos = (props) => {
 
   const mw = 1;
-  const mh = 0.25;
+  const mh = 1;
   const w=800;
   const h=600;
 
@@ -16,7 +16,6 @@ const Caminhos = (props) => {
   return (
     <div>
       <Svg
-        preserveAspectRatio="xMidYMid meet"
         viewBox={x.toString() + " " + y.toString() + " " + w1.toString() + " " + h1.toString()}
         >
         <path

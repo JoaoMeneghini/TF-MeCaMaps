@@ -153,7 +153,7 @@ export const Floor = styled.button`
 `;
 
 export const Map = styled.div`
-    max-width: 1200px;
+    max-width: 800px;
     display: flex;
     margin: 0 auto;
     padding: 20px 10px 10px 10px;

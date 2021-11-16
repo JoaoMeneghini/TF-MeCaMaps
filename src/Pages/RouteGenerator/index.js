@@ -7,8 +7,8 @@ import  Grafo from '../../Components/Djikstra/grafo';
 import Drops from '../../Components/Dropdown/Dropdown';
 
 //import Floor0 from '../../Images/Inferior.png';
-import Floor0 from '../../Images/first.jpeg';
-import Floor1 from '../../Images/Superior.png'
+import Floor0 from '../../Images/zero.png';
+import Floor1 from '../../Images/first.png'
 
 import Andar from '../../Components/Floor/floor';
 
@@ -86,7 +86,9 @@ export default props => {
                 </Buttons_a>
 
             </Buttons>
+            <Map>
             {floor === 0 ? (<Andar place={Floor0} color={toColor} floor={floor}/>) : ((<Andar place={Floor1} color={toColor} option={floor}/>))}
+            </Map>
             <Distance>Distância estimada: {distance.toFixed(1)}m</Distance>
         </Div>
     );
