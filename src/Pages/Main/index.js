@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
-import { CamImg, Div, CamButton, StyledLink, SubTitle, Title, Button } from './styles';
+import { CamImg, Div, CamButton, StyledLink, SubTitle, Title, TitleBox, Button } from './styles';
 import cam from '../../Images/cam.png';
+import arrow from '../../Images/arrow_GMaps.png';
+import pin from '../../Images/Pin_GMaps.png';
 import { Link, useParams } from 'react-router-dom';
 
 //import DropdownSearchSelection from '../../Components/Dropdown/Dropdown';
 import Drops from '../../Components/Dropdown/Dropdown';
 
 import { useHereC1, useWhereC1 } from "../../Context/options";
+
+import  { qr_correlations } from '../../Components/Floor/qrcode_correlations';
 
 export default props => {
 
@@ -17,20 +21,22 @@ export default props => {
 
     useEffect(() => {
         if (actual) {
-            setHereC1(actual)
+            setHereC1(qr_correlations[actual])
         }
     },[actual])
 
     return (
         <Div>
-            <div>
+            <TitleBox>
+                <img src={arrow} style={{width : '30px', height : '30px'}}/>
                 <Title>MeCaMaps</Title>
-            </div>
+                <img src={pin} style={{width : '20px', height : '30px'}}/>
+            </TitleBox>
             <div>
                 <SubTitle>Localize-se na Mecatrônica!</SubTitle>
             </div>
             <div>
-                <StyledLink to="route-generator" style={{ textDecoration: 'none' }}><Button>Visualizar Mapa</Button></StyledLink>
+                <StyledLink to="/route-generator"><Button>Visualizar Mapa</Button></StyledLink>
             </div>
             <div>
                 <StyledLink to="qrcode"><CamButton>
@@ -42,7 +48,7 @@ export default props => {
                 <Button><Drops placeholder='destino' place={whereC1} setPlace={setWhereC1}></Drops></Button>
             </div>
             <div>
-                <StyledLink to={((hereC1.length > 1) && (whereC1.length > 1)) ? 'route-generator' : false} style={{ textDecoration: 'none' }}>
+                <StyledLink to={((hereC1.length > 1) && (whereC1.length > 1)) ? '/route-generator' : false}>
                     <Button disabled={(hereC1.length < 1) || (whereC1.length < 1)}>Gerar Rota</Button>
                 </StyledLink>
             </div>

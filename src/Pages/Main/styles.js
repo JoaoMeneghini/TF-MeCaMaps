@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Div = styled.div`
     width: 450px;
     height: 450px;
-    margin: 20px auto;
+    margin: 0 auto;
     position: relative;
 `;
 
@@ -20,7 +20,7 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     background-color: ${(props) => theme[props.theme].default};
-    color: black;
+    color: #36382E;
     height: 50px;
     width: 300px;
     padding: 5px 15px;
@@ -42,7 +42,7 @@ export const Button = styled.button`
 const theme = {
     gray: {
       default: "#bbbbbb",
-      hover: "#aaaaaa"
+      hover: "#4A89F3"
     },
     pink: {
       default: "#e91e63",
@@ -55,7 +55,10 @@ Button.defaultProps = {
   };
 
 export const CamButton = styled.button`
+    display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     height: 50px;
     width: 50px;
@@ -73,21 +76,31 @@ CamButton.defaultProps = {
     theme: "gray"
   };
 
+export const TitleBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+`
+
 export const Title = styled.h1`
     display: flex;
     justify-content: center;
+    color: #1EA362;
 `
 
 export const SubTitle = styled.h2`
     display: flex;
     justify-content: center;
-    color: #aaaaaa;
+    color: #36382E;
 `
 export const CamImg = styled.img`
-    position: relative;
-    height: 55%;
-    width: 100%;
-    margin: 10px 0;
+    height: 28px;
+    width: 33px;
 `
 
 export const StyledLink = styled(Link)`

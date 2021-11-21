@@ -28,8 +28,8 @@ export default props => {
     }, [data])
 
     const previewStyle = {
-        height: 1000,
-        width: 1000,
+        height: '100%',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center'
     }
@@ -66,7 +66,6 @@ export default props => {
                     facingMode={mode}
                 />
             </div>
-            <input type="button" value="Camera..." onClick={cameraButton} />
         </React.Fragment>
     )
 }

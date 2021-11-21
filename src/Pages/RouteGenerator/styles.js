@@ -128,10 +128,23 @@ CamButton.defaultProps = {
     theme: "gray"
   };
 
+  export const TitleBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+`
+
 export const Title = styled.h1`
     display: flex;
     justify-content: center;
+    color: #1EA362;
 `
+
 export const CamImg = styled.img`
     height: 23px;
     width: 23px;
@@ -154,6 +167,7 @@ export const Floor = styled.button`
 
 export const Map = styled.div`
     max-width: 800px;
+    max-height: 800px;
     display: flex;
     margin: 0 auto;
     padding: 20px 10px 10px 10px;
@@ -161,4 +175,5 @@ export const Map = styled.div`
 
 export const Floor_img = styled.img`
     width: 100%
+    height: 100%;
 `;
