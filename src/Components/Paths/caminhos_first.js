@@ -10,12 +10,12 @@ const Caminhos = (props) => {
 
     const visible = 0;
 
-    const mw = 0.6;
+    const mw = 0.59;
     const mh = 1;
     const w=800;
     const h=600;
 
-    const x=w*(1-mw)/2-67;
+    const x=w*(1-mw)/2-68;
     const y=h*(1-mh)/2+88;
     const w1=w*mw;
     const h1=h*mh;
@@ -293,8 +293,8 @@ const Caminhos = (props) => {
         ></path>
         <path
           fill="none"
-          stroke={props.color.includes('GH-GY') ? color_path : color_test}
-          strokeOpacity={props.color.includes('GH-GY') ? 1 : visible}
+          stroke={props.color.includes('GG-GY') ? color_path : color_test}
+          strokeOpacity={props.color.includes('GG-GY') ? 1 : visible}
           strokeWidth={stroke}
           d="M398.33 428.83L398.33 450.87"
         ></path>
