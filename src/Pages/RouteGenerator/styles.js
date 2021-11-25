@@ -170,7 +170,6 @@ export const Map = styled.div`
     max-height: 800px;
     display: flex;
     margin: 0 auto;
-    padding: 20px 10px 10px 10px;
 `;
 
 export const Floor_img = styled.img`

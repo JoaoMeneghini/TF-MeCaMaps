@@ -367,6 +367,6 @@ export const places = [
 {key: 'Biblioteca Lado Dir', cat:'Outros'},
 {key: 'Escada Portaria', cat:'Outros'},
 {key: 'Passarela Térreo', cat:'Outros'},
-{key: 'Secretaria Pós Graduação', cat:'Outros'},
+{key: 'Secretaria Marinha', cat:'Outros'},
 {key: 'Passarela Superior', cat:'Outros'}
 ];

@@ -10,13 +10,13 @@ const Caminhos = (props) => {
 
     const visible = 0;
 
-    const mw = 0.538;
+    const mw = 0.555;
     const mh = 1;
     const w=800;
     const h=600;
 
-    const x=w*(1-mw)/2-18;
-    const y=h*(1-mh)/2+91;
+    const x=w*(1-mw)/2-18.5;
+    const y=h*(1-mh)/2+77.5;
     const w1=w*mw;
     const h1=h*mh;
 
@@ -25,19 +25,13 @@ const Caminhos = (props) => {
         <Svg
             viewBox={x.toString() + " " + y.toString() + " " + w1.toString() + " " + h1.toString()}
             >
+
             <path
                 fill="none"
                 stroke={props.color.includes('B-S') ? color_path : color_test}
                 strokeOpacity={props.color.includes('B-S') ? 1 : visible}
                 strokeWidth={stroke}
                 d="M282.2 378.42L282.2 409.92"
-            ></path>
-            <path
-                fill="none"
-                stroke={props.color.includes('A-U') ? color_path : color_test}
-                strokeOpacity={props.color.includes('A-U') ? 1 : visible}
-                strokeWidth={stroke}
-                d="M308.7 409.92L334.9 409.92"
             ></path>
             <path
                 fill="none"
@@ -416,6 +410,13 @@ const Caminhos = (props) => {
                 strokeOpacity={props.color.includes('A-B') ? 1 : visible}
                 strokeWidth={stroke}
                 d="M282.2 409.92L308.7 409.92"
+            ></path>
+            <path
+                fill="none"
+                stroke={props.color.includes('A-U') ? color_path : color_test}
+                strokeOpacity={props.color.includes('A-U') ? 1 : visible}
+                strokeWidth={stroke}
+                d="M308.7 409.92L334.9 409.92"
             ></path>
             <path
                 fill="none"
@@ -1018,13 +1019,6 @@ const Caminhos = (props) => {
                 strokeOpacity={props.color.includes('DJ-DK') ? 1 : visible}
                 strokeWidth={stroke}
                 d="M308.7 458.33L581.71 458.33"
-            ></path>
-            <path
-                fill="none"
-                stroke={props.color.includes('DK-DL') ? color_path : color_test}
-                strokeOpacity={props.color.includes('DK-DL') ? 1 : visible}
-                strokeWidth={stroke}
-                d="M581.71 458.33L581.71 486.97"
             ></path>
             <path
                 fill="none"

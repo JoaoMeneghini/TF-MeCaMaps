@@ -1,4 +1,6 @@
 import Multiselect from 'multiselect-react-dropdown';
+import  { correlations } from '../../Components/Paths/correlations';
+import  { coords } from '../../Components/Paths/coords';
 import { places } from './places';
 
 export default function Drops(props) {
@@ -17,7 +19,7 @@ export default function Drops(props) {
         selectionLimit={1}
         selectedValues={props.place ? [{key: props.place}] : []}
         onSelect={(selectedItem) => {
-            props.setPlace(selectedItem[0].key)
+            props.setPlace(selectedItem[0].key);
         }}
         onRemove={() => {
             props.setPlace('')

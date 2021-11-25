@@ -7,6 +7,8 @@ export default function OptionProvider({ children }) {
   const [whereC1, setWhereC1] = useState('');
   const [floor, setFloor] = useState(0);
   const [toColor, setToColor] = useState([]);
+  let [coordMan, setCoordMan] = useState(0);
+  let [coordPin, setCoordPin] = useState(0);
 
   return (
     <OptionContext.Provider
@@ -18,7 +20,11 @@ export default function OptionProvider({ children }) {
         toColor,
         setToColor,
         floor,
-        setFloor
+        setFloor,
+        coordMan,
+        setCoordMan,
+        coordPin,
+        setCoordPin
       }}
     >
       {children}
@@ -31,6 +37,13 @@ export function useHereC1() {
   if (!context) throw new Error("useCount must be used within a CountProvider");
   const { hereC1, setHereC1 } = context;
   return { hereC1, setHereC1 };
+};
+
+export function useCoordMan() {
+    const context = useContext(OptionContext);
+    if (!context) throw new Error("useCount must be used within a CountProvider");
+    const { coordMan, setCoordMan } = context;
+    return { coordMan, setCoordMan };
 }
 
 export function useWhereC1() {
@@ -38,6 +51,13 @@ export function useWhereC1() {
     const { whereC1, setWhereC1 } = context;
     return { whereC1, setWhereC1 };
   }
+
+  export function useCoordPin() {
+    const context = useContext(OptionContext);
+    if (!context) throw new Error("useCount must be used within a CountProvider");
+    const { coordPin, setCoordPin } = context;
+    return { coordPin, setCoordPin };
+}
 
 export function useColor() {
     const context = useContext(OptionContext);

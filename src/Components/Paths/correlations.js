@@ -231,7 +231,7 @@ export const correlations = {
 'TS39': ['HU', 1],
 'TS41': ['HR', 1],
 'NDF': ['HT', 1],
-'TPN': ['DL', 0],
+'TPN': ['DK', 0],
 'TS43': ['HQ', 1],
 'Alexandre Kawano (MS16)': ['HJ', 1],
 'Arturo Cordero (MS03)': ['GR', 1],

@@ -10,13 +10,13 @@ const Caminhos = (props) => {
 
     const visible = 0;
 
-    const mw = 0.59;
+    const mw = 0.6;
     const mh = 1;
     const w=800;
     const h=600;
 
-    const x=w*(1-mw)/2-68;
-    const y=h*(1-mh)/2+88;
+    const x=w*(1-mw)/2-68.5;
+    const y=h*(1-mh)/2+86.5;
     const w1=w*mw;
     const h1=h*mh;
 
