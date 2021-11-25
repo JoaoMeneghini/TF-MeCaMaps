@@ -15,11 +15,12 @@ import Andar from '../../Components/Floor/floor';
 import cam from '../../Images/cam.png';
 import arrow from '../../Images/arrow_GMaps.png';
 import pin from '../../Images/Pin_GMaps.png';
+import label from '../../Images/legenda.png';
 
 import { useHereC1, useWhereC1, useColor, useFloor, useCoordMan, useCoordPin } from "../../Context/options";
-import  { correlations } from '../../Components/Paths/correlations';
-import  { coords } from '../../Components/Paths/coords';
-import  { qr_correlations } from '../../Components/Floor/qrcode_correlations';
+import { correlations } from '../../Components/Paths/correlations';
+import { coords } from '../../Components/Paths/coords';
+import { qr_correlations } from '../../Components/Floor/qrcode_correlations';
 
 export default props => {
     let b = new Grafo();
@@ -116,11 +117,11 @@ export default props => {
 
             </Buttons>
             <Map>
-            {console.log(props.floor)}
-            {floor === 0 ? (<Andar showMan={showMan} showPin={showPin} coordMan={coordMan}
-                                    coordPin={coordPin} place={Floor0} color={toColor} floor={floor}/>)
-                            : (<Andar showMan={showMan} showPin={showPin} coordMan={coordMan} coordPin={coordPin} place={Floor1}
-                                    color={toColor} option={floor}/>)}
+                <img src={label} style={{position: 'relative'}}/>
+                {floor === 0 ? (<Andar showMan={showMan} showPin={showPin} coordMan={coordMan}
+                                        coordPin={coordPin} place={Floor0} color={toColor} floor={floor}/>)
+                                : (<Andar showMan={showMan} showPin={showPin} coordMan={coordMan} coordPin={coordPin} place={Floor1}
+                                        color={toColor} option={floor}/>)}
             </Map>
             <Distance>Distância estimada: {distance.toFixed(1)}m</Distance>
         </Div>

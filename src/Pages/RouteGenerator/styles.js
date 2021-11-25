@@ -17,7 +17,7 @@ export const Div = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
 `;
 
 export const Floor_options = styled.div`
@@ -169,6 +169,7 @@ export const Map = styled.div`
     max-width: 800px;
     max-height: 800px;
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
 `;
 
