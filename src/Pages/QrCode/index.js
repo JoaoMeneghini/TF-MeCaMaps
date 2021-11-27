@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import QrReader from 'react-qr-scanner';
+/*import QrReader from 'react-qr-scanner';*/
+import QrReader from 'react-web-qr-reader';
 import { useHistory } from "react-router-dom";
 
 export default props => {
@@ -28,42 +29,39 @@ export default props => {
     }, [data])
 
     const previewStyle = {
-        height: '100%',
         width: '100%',
-        display: 'flex',
-        justifyContent: 'center'
-    }
+    };
 
     const camStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        marginTop: '-50px'
+        maxWidth: '800px',
+        margin: '0 auto',
     }
 
     const textStyle = {
         fontSize: '30px',
         textAlign: 'center',
-        marginTop: '100px'
-
+        marginTop: '100px',
+        color: '#4A89F3',
     }
 
     const regex = /([^\/?]+)(?:\?.+)?$/;
 
     return(
         <React.Fragment>
-            <div style = {camStyle} >
+            <div style = {camStyle}>
+                <p style={textStyle}>Atualize sua posição atual</p>
                 <QrReader
                     delay={100}
                     style={previewStyle}
                     onScan={(result) => {
                         if (result) {
-                            console.log(result.text.match(regex)[1]);
-                            setData(result.text.match(regex)[1]);
+                            console.log(result.data.match(regex)[1]);
+                            setData(result.data.match(regex)[1]);
                         }
                         else setData("Not Found");
                     }}
                     onError={handleError}
-                    facingMode={mode}
+                    facingMode='environment'
                 />
             </div>
         </React.Fragment>

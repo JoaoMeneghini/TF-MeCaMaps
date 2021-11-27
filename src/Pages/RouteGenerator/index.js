@@ -98,7 +98,7 @@ export default props => {
             </TitleBox>
             <Floor_options>
                 <Floor_option>
-                    <StyledLink to="/" >Menu Principal</StyledLink>
+                    <StyledLink to="/">Menu Principal</StyledLink>
                 </Floor_option>
                 <Floor_option onClick={changeFloor}>Trocar andar</Floor_option>
             </Floor_options>

@@ -23,7 +23,7 @@ export default class Grafo {
       let Q  = Object.assign({}, this.dist[v1]);
       let s = [];
       let alt = 0;
-      let scale = 200;
+      let distancia = 0;
 
       while (!s.includes(v2)) {
 
@@ -53,6 +53,8 @@ export default class Grafo {
       let b = v2;
       let path = [];
 
+      let goal = this.dist[v1][v2];
+
       while (b !== v1) {
           let c = this.prev[b];    //Determina caminho
           path.push(c[1]);
@@ -61,7 +63,7 @@ export default class Grafo {
 
       path.reverse();
 
-      return [alt,path] ;
+      return [goal,path] ;
   }
 }
 
