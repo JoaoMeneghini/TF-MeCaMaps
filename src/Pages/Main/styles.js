@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
-  display: flex;
-  text-align: center;
-  background-color: gray;
-`;
-
 export const Div = styled.div`
     width: 450px;
     height: 450px;
@@ -43,10 +37,6 @@ const theme = {
     gray: {
       default: "#bbbbbb",
       hover: "#4A89F3"
-    },
-    pink: {
-      default: "#e91e63",
-      hover: "#ad1457"
     }
   };
 
