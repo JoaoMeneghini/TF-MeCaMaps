@@ -1,17 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  text-align: center;
-  margin-top: 0;
-  background-color: gray;
-`;
-
 export const Div = styled.div`
     display: flex;
     flex-direction: column;
@@ -48,10 +37,6 @@ const theme = {
     gray: {
       default: "#bbbbbb",
       hover: "#aaaaaa"
-    },
-    pink: {
-      default: "#e91e63",
-      hover: "#ad1457"
     }
   };
 
@@ -129,14 +114,14 @@ CamButton.defaultProps = {
   };
 
   export const TitleBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
 `
 
 export const Title = styled.h1`

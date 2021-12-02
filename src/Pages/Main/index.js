@@ -1,34 +1,34 @@
-//Libs
+// Libs
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-//Styles
+// Styles
 import { CamImg, Div, CamButton, StyledLink, SubTitle, Title, TitleBox, Button } from './styles';
-//Icons
+// Icons
 import cam from '../../Images/cam.png';
 import arrow from '../../Images/arrow_GMaps.png';
 import pin from '../../Images/Pin_GMaps.png';
-//Components
+// Components
 import Drops from '../../Components/Dropdown/Dropdown';
 import  { qr_correlations } from '../../Components/Floor/qrcode_correlations';
-//Global Variable
+// Global Variable
 import { useHereC1, useWhereC1 } from "../../Context/options";
 
 
 export default props => {
 
-    const { actual } = useParams(); //access param from url
-    const { hereC1, setHereC1 } = useHereC1(); //current position
-    const { whereC1, setWhereC1 } = useWhereC1(); //place to go
+    const { actual } = useParams(); // access param from url
+    const { hereC1, setHereC1 } = useHereC1(); // current position
+    const { whereC1, setWhereC1 } = useWhereC1(); // place to go
 
-    //Everytime url is updated, current position is also updated
+    // Everytime url is updated, current position is also updated
     useEffect(() => {
         if (actual) {
             setHereC1(qr_correlations[actual])
         }
     },[actual])
 
-    //return html structure to show the website
-    //when an option is selected, current position or place to go is updated
+    // return html structure to show the website
+    // when an option is selected, current position or place to go is updated
     // button "Gerar Rota" only be enabled if both current position and place to go are selected
     return (
         <Div>
@@ -57,6 +57,7 @@ export default props => {
                     <Button disabled={(hereC1.length < 1) || (whereC1.length < 1)}>Gerar Rota</Button>
                 </StyledLink>
             </div>
+            <div style={{textAlign: 'center', margin: 'auto 75px'}}><a href="https://forms.gle/MacBD1qGo3KrQreh9">Fale conosco</a></div>
         </Div>
     );
 }
