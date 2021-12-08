@@ -1,3 +1,5 @@
+// dictionary with coordinates of each node. Taken from the CAD used to draw the paths
+
 export const coords = {
     'A' : [6.9184, 30.0497],
     'C' : [6.9184, 37.6025],

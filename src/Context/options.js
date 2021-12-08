@@ -1,14 +1,16 @@
+// Libs
 import React, { createContext, useState, useContext } from "react";
 
+// creating global environment
 const OptionContext = createContext();
 
 export default function OptionProvider({ children }) {
-  const [hereC1, setHereC1] = useState('');
-  const [whereC1, setWhereC1] = useState('');
-  const [floor, setFloor] = useState(0);
-  const [toColor, setToColor] = useState([]);
-  let [coordMan, setCoordMan] = useState(0);
-  let [coordPin, setCoordPin] = useState(0);
+  const [hereC1, setHereC1] = useState(''); // curent position
+  const [whereC1, setWhereC1] = useState(''); // place to go
+  const [floor, setFloor] = useState(0); // current floor
+  const [toColor, setToColor] = useState([]); // path between start and end nodes
+  let [coordMan, setCoordMan] = useState(0); // coords of yellow pin
+  let [coordPin, setCoordPin] = useState(0); // coords of red pin
 
   return (
     <OptionContext.Provider

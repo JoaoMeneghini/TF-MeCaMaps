@@ -1,6 +1,10 @@
+// Libs
 import React from 'react';
+// Styles
 import { Svg } from './styles';
 
+// render svg of paths, according to the vector returned by dijkstra algorithm
+// viewbox was modified to fit path with map image
 const Caminhos = (props) => {
 
     const color_path = '#4A89F3';

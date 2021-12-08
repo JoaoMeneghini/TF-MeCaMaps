@@ -1,3 +1,5 @@
+// dictionary relating node name with real name, as well as the floor in which is located
+
 export const correlations = {
     'A0': ['C', 0],
     'A1A': ['C', 0],
@@ -328,6 +330,7 @@ export const correlations = {
     'Marcos Mendes de Oliveira Pinto (ES61)': ['ET', 1],
     'Toshilchi Tachibana (ES63)': ['EU', 1],
     'Centro de Engenharia Automotiva': ['DT', 1],
+    'Grupo de Pesquisa em Refrigeração, Ar Condicionado e Conforto Termico': ['BB', 0],
     'Laboratório de Acústica e Meio Ambiente': ['CJ', 0],
     'Laboratório de Dinâmica e Controle': ['BO', 0],
     'Laboratório de Dinâmica e Simulação Veicular': ['BO', 0],
@@ -355,10 +358,11 @@ export const correlations = {
     'Laboratório de Tomada de Decisão': ['HG', 1],
     'Laboratório de Ultrassom': ['DA', 0],
     'Laboratório de Veículos não Tripulados': ['HI', 1],
+    'Laboratório de Análise, Avaliação e Gerenciamento de Riscos': ['N', 0],
     'Laboratório de Modelos': ['AY', 0],
+    'Laboratório de Otimização e Projeto Integrado': ['M', 0],
     'Núcleo Avançado em Mecânica da Fratura e Integridade Estrutural': ['P', 0],
     'Tanque de Provas Numérico': ['DL', 0],
-    'Grupo de Pesquisa em Refrigeração, Ar Condicionado e Conforto Termico': ['BB', 0],
     'ThunderRatz': ['CR', 0],
     'Poli Milhagem': ['CN', 0],
     'Poli Náutico': ['AY', 0],

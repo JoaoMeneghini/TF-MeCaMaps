@@ -1,3 +1,5 @@
+// Dictionary which relates node name and real name
+
 export const qr_correlations = {
     'A' : 'Portaria',
     'C' : 'A0',

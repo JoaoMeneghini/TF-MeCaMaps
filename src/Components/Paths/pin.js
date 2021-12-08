@@ -1,6 +1,11 @@
+// Libs
 import React from 'react';
+// Styles
 import { Svg_pin } from './styles';
 
+// render svg of pins, according to the vector returned by dijkstra algorithm
+// viewbox was modified to fit pin with map image and svg path
+// Refers to yellow man, used to identify the 'current position'
 const Pin = (props) => {
 
     let x_pin;

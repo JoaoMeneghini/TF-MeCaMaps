@@ -1,14 +1,15 @@
-import React, { useRef, useEffect } from 'react';
-
+// Libs
+import React from 'react';
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+// Styles
 import "./styles.css";
-
+// Components
 import Routes_zero from '../../Components/Paths/caminhos_zero';
 import Routes_first from '../../Components/Paths/caminhos_first';
 import Pin from '../../Components/Paths/pin';
 import Man_pin from '../../Components/Paths/man_pin';
 
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-
+// render maps, paths and pins according to floor and options selected
 export default props => {
     return (
       <div className="App">

@@ -1,6 +1,10 @@
+// Libs
 import React from 'react';
+// Styles
 import { Svg } from './styles';
 
+// render svg of paths, according to the vector returned by dijkstra algorithm
+// viewbox was modified to fit path with map image
 const Caminhos = (props) => {
 
     const color_path = '#4A89F3';
@@ -686,7 +690,7 @@ const Caminhos = (props) => {
         <path
           fill="none"
           stroke={props.color.includes('DT-DU') ? color_path : color_test}
-          strokeOpacity={props.color.includes('DT-TU') ? 1 : visible}
+          strokeOpacity={props.color.includes('DT-DU') ? 1 : visible}
           strokeWidth={stroke}
           d="M236.56 413.2L236.56 407.37"
         ></path>

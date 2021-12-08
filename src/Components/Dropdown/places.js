@@ -1,3 +1,5 @@
+// Dictionary including all options and its categories
+
 export const places = [
     {key: 'A0', cat:'Salas'},
     {key: 'A1A', cat:'Salas'},
@@ -328,6 +330,7 @@ export const places = [
     {key: 'Marcos Mendes de Oliveira Pinto (ES61)', cat:'Sala de Professor'},
     {key: 'Toshilchi Tachibana (ES63)', cat:'Sala de Professor'},
     {key: 'Centro de Engenharia Automotiva', cat:'Laboratório'},
+    {key: 'Grupo de Pesquisa em Refrigeração, Ar Condicionado e Conforto Termico', cat:'Laboratório'},
     {key: 'Laboratório de Acústica e Meio Ambiente', cat:'Laboratório'},
     {key: 'Laboratório de Dinâmica e Controle', cat:'Laboratório'},
     {key: 'Laboratório de Dinâmica e Simulação Veicular', cat:'Laboratório'},
@@ -355,10 +358,11 @@ export const places = [
     {key: 'Laboratório de Tomada de Decisão', cat:'Laboratório'},
     {key: 'Laboratório de Ultrassom', cat:'Laboratório'},
     {key: 'Laboratório de Veículos não Tripulados', cat:'Laboratório'},
+    {key: 'Laboratório de Análise, Avaliação e Gerenciamento de Riscos', cat:'Laboratório'},
     {key: 'Laboratório de Modelos', cat:'Laboratório'},
+    {key: 'Laboratório de Otimização e Projeto Integrado', cat:'Laboratório'},
     {key: 'Núcleo Avançado em Mecânica da Fratura e Integridade Estrutural', cat:'Laboratório'},
     {key: 'Tanque de Provas Numérico', cat:'Laboratório'},
-    {key: 'Grupo de Pesquisa em Refrigeração, Ar Condicionado e Conforto Termico', cat:'Laboratório'},
     {key: 'ThunderRatz', cat:'Grupo de Extensão'},
     {key: 'Poli Milhagem', cat:'Grupo de Extensão'},
     {key: 'Poli Náutico', cat:'Grupo de Extensão'},
