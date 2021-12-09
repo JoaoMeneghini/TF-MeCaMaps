@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - npm install react-router-dom
 - npm install multiselect-react-dropdown
 - npm instal mathjs
-- npm install --save react-qr-scanner
+- npm install --save react-web-qr-reader
 - npm install --save react-zoom-pan-pinch
 - npm install gh-pages
 
